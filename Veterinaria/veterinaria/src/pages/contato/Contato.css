@@ -1,0 +1,200 @@
+/* Estilização da página de contato */
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* Estilo específico para o h1 da página "Contato" */
+.container-form > h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: #2F4F4F;
+    text-transform: uppercase;
+}
+
+/* Div container que envolve infos-left e title-subtitle */
+.container-main-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para a div infos-left */
+.infos-left {
+    flex: 0 0 40%;
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #ECF9F2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+/* Estilo para a div title-subtitle */
+.title-subtitle {
+    flex: 0 0 50%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.infos-left h3, .title-subtitle h1 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #2F4F4F;
+}
+
+.title-subtitle h1 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.title-subtitle .subtitle {
+    font-size: 1.4rem;
+    color: #9E9E9E;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.infos-left h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.infos-left p, .title-subtitle p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.text {
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 0.9rem;
+    color: red;
+    margin-top: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-form-dados {
+    background-color: #2F4F4F;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.button-form-dados:hover {
+    background-color: #555;
+}
+
+/* Responsividade para telas muito grandes (acima de 1600px) */
+@media (min-width: 1600px) {
+    .container-main-form {
+        max-width: 1400px;
+    }
+    
+    .title-subtitle h1 {
+        font-size: 2.8rem;
+    }
+
+    .title-subtitle .subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+/* Responsividade para telas grandes (1200px a 1600px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .container-main-form {
+        max-width: 1200px;
+    }
+    
+    .title-subtitle h1 {
+        font-size: 2.4rem;
+    }
+
+    .title-subtitle .subtitle {
+        font-size: 1.4rem;
+    }
+}
+
+/* Responsividade para telas médias (900px a 1199px) */
+@media (min-width: 900px) and (max-width: 1199px) {
+    .container-main-form {
+        flex-direction: row;
+    }
+
+    .title-subtitle h1 {
+        font-size: 2rem;
+    }
+
+    .title-subtitle .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsividade para telas menores (600px a 899px) */
+@media (max-width: 899px) {
+    .container-main-form {
+        flex-direction: column;
+    }
+  
+    .infos-left, .title-subtitle {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    .title-subtitle h1 {
+        font-size: 1.8rem;
+    }
+
+    .title-subtitle .subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsividade para telas muito pequenas (abaixo de 600px) */
+@media (max-width: 600px) {
+    .title-subtitle h1 {
+        font-size: 1.6rem;
+    }
+  
+    .infos-left h3, .infos-left p {
+        font-size: 1.2rem;
+    }
+  
+    .title-subtitle p {
+        font-size: 1rem;
+    }
+
+    .button-form-dados {
+        width: 100%;
+    }
+}

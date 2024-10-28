@@ -1,0 +1,266 @@
+.container-quemSomos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+
+}
+
+.container-main-quemSomos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 10rem;
+}
+
+.container-main-quemSomos h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    color: #2F4F4F;
+    /* Tom mais escuro para títulos */
+    text-transform: uppercase;
+}
+
+.container-main-quemSomos .subtitle {
+    font-size: 1.8rem;
+    color: #9E9E9E;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.section-quemSomos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container-main-quemSomos p {
+    font-size: 1.15rem;
+    font-family: "Barlow";
+    font-weight: 500;
+    color: #4A4A4A;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.image-section-quemSomos {
+    flex: 0 1 30%;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.image-section-quemSomos img {
+    max-width: 100%;
+    height: auto;
+    min-width: 25rem;
+    border-radius: 1rem;
+}
+
+.container-main-quemSomos .subtitle-last {
+    text-align: left !important;
+}
+
+.schedule-section-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0FBF4;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: visible;
+    height: 29rem;
+}
+
+.schedule-section-sobre .schedule-text {
+    flex: 1;
+    max-width: 35%;
+    text-align: left;
+}
+
+.schedule-section-sobre .schedule-text h2 {
+    font-size: 2rem;
+    font-family: "Barlow Semi Condensed";
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.schedule-section-sobre .schedule-text p {
+    font-size: 1.1rem;
+    font-family: "Barlow";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.schedule-section-sobre .button-options {
+    background-color: #31BE52;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    justify-content: center;
+    gap: 1px;
+    width: 20rem;
+    height: 3rem;
+}
+
+.schedule-section-sobre .button-options:hover {
+    background-color: #28A745;
+}
+
+.schedule-section-sobre .schedule-image {
+    flex: 1;
+    max-width: 40rem;
+}
+
+/* Ajuste para resolução 1366x768 */
+@media (max-width: 1366px) {
+    .schedule-section-sobre {
+        margin-top: 2rem;
+        /* Reduzindo a margem superior para evitar sobreposição */
+        padding-top: 15rem;
+        /* Ajustando o padding superior */
+        padding-bottom: 19rem;
+        /* Ajustando o padding inferior */
+    }
+}
+
+/* Responsividade geral para dispositivos menores */
+@media (max-width: 1024px) {
+    .image-section-quemSomos {
+        flex: 0 1 40%;
+        /* Redimensiona melhor em telas menores */
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .image-section-quemSomos img {
+        min-width: 200px;
+        /* Define um tamanho mínimo adequado para telas pequenas */
+    }
+
+    .container-main-quemSomos {
+        padding: 2rem 5rem;
+        /* Diminuindo o padding */
+    }
+
+    .container-main-quemSomos h1 {
+        font-size: 2.5rem;
+        /* Reduzindo o tamanho do título */
+    }
+
+    .container-main-quemSomos .subtitle {
+        font-size: 1.5rem;
+        /* Reduzindo o tamanho do subtítulo */
+    }
+
+    .container-main-quemSomos p {
+        font-size: 1rem;
+        /* Reduzindo o tamanho do texto */
+    }
+
+    .schedule-section-sobre {
+        flex-direction: column;
+        /* Mudando a direção para coluna */
+        padding-top: 10rem;
+        /* Ajustando o padding para o topo */
+        padding-bottom: 10rem;
+        /* Ajustando o padding para a parte inferior */
+        height: auto;
+        /* Deixando a altura automática */
+    }
+
+    .schedule-section-sobre .schedule-text {
+        max-width: 90%;
+        /* Aumentando a largura máxima para pequenas telas */
+        margin: 0 auto;
+        /* Centralizando o texto */
+        text-align: center;
+        /* Centralizando o texto */
+    }
+
+    .schedule-section-sobre .schedule-image {
+        max-width: 90%;
+        /* Aumentando a largura máxima para pequenas telas */
+        margin: 20px 0;
+        /* Adicionando espaço vertical entre o texto e a imagem */
+    }
+
+    .schedule-section-sobre .button-options {
+        width: 100%;
+        /* Ajustando o botão para ocupar 100% da largura */
+    }
+}
+
+/* Responsividade para dispositivos ainda menores (celulares) */
+@media (max-width: 768px) {
+    .container-main-quemSomos {
+        padding: 1rem 2rem;
+        /* Diminuindo o padding ainda mais */
+    }
+
+    .container-main-quemSomos h1 {
+        font-size: 2rem;
+        /* Ajustando para um tamanho ainda menor */
+    }
+
+    .container-main-quemSomos .subtitle {
+        font-size: 1.3rem;
+        /* Ajustando o subtítulo */
+    }
+
+    .container-main-quemSomos p {
+        font-size: 0.9rem;
+        /* Ajustando o tamanho do texto */
+    }
+
+    .schedule-section-sobre {
+        padding-top: 7rem;
+        /* Diminuindo o padding superior */
+        padding-bottom: 7rem;
+        /* Diminuindo o padding inferior */
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex: smartphones em modo retrato) */
+@media (max-width: 480px) {
+    .container-main-quemSomos h1 {
+        font-size: 1.8rem;
+        /* Tamanho do título reduzido */
+    }
+
+    .container-main-quemSomos .subtitle {
+        font-size: 1.2rem;
+        /* Tamanho do subtítulo reduzido */
+    }
+
+    .container-main-quemSomos p {
+        font-size: 0.85rem;
+        /* Tamanho do texto reduzido */
+    }
+
+    .schedule-section-sobre {
+        padding-top: 5rem;
+        /* Diminuindo ainda mais o padding superior */
+        padding-bottom: 5rem;
+        /* Diminuindo ainda mais o padding inferior */
+    }
+}

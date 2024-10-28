@@ -1,0 +1,365 @@
+.carousel-image {
+  width: 100%; /* Muda de 1600px para 100% para ser responsivo */
+  height: auto; /* Mantém a proporção da altura */
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.container-images {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  width: 100%; /* Ajusta a largura para ser responsiva */
+  height: auto; /* Ajusta a altura para ser responsiva */
+}
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 22px;
+  margin-top: 5rem;
+  background-color: #F0FBF4;
+  max-height: 32rem;
+}
+
+.carousel-container {
+  flex: 1;
+  max-width: 32rem; /* Ajuste a largura máxima */
+  aspect-ratio: 9 / 8; /* Defina a proporção de aspecto */
+  overflow: hidden;
+  margin-top: -4.45rem;
+}
+
+.clinic-description {
+  flex: 1;
+  max-width: 600px;
+  text-align: justify;
+  height: auto; /* Ajusta a altura para ser responsiva */
+  padding-left: 20px;
+  padding-right: 100px;
+  border-radius: 10px;
+}
+
+.clinic-description h1 {
+  font-size: 2rem;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.clinic-description p {
+  font-size: 1rem;
+  font-family: "Barlow";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.button .button-options {
+  background-color: #31BE52;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1px;
+  width: 12rem;
+  height: 2.5rem;
+}
+
+.button-home-section {
+  background-color: #31BE52; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  font-weight: bold;
+  border: none; /* Remove a borda padrão */
+  border-radius: 0.3125rem; /* Bordas arredondadas */
+  padding: 0.75rem 1.5rem; /* Aumenta o espaçamento interno do botão */
+  width: 200px; /* Largura fixa para todos os botões */
+  height: 50px; /* Altura fixa para todos os botões */
+  margin: 0 8px; /* Margem entre os botões */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  top: 15px; /* Distância do topo do contêiner pai */
+  right: 20px; /* Distância da direita do contêiner pai */
+  transition: background-color 0.5s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.button-home-section:hover {
+  background-color: #28a745; /* Cor ao passar o mouse */
+  transform: translateY(-2px); /* Levanta o botão um pouco */
+}
+
+.no-underline {
+  text-decoration: none; /* Remove o sublinhado do link com a classe específica */
+}
+
+.saiba-mais-button {
+  background-color: #31BE52; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  font-weight: bold;
+  border: none; /* Remove a borda padrão */
+  border-radius: 0.3125rem; /* Bordas arredondadas */
+  padding: 0.75rem 1.5rem; /* Aumenta o espaçamento interno do botão */
+  cursor: pointer; /* Muda o cursor ao passar o mouse */
+  position: absolute; /* Posiciona o botão em relação ao contêiner pai */
+  bottom: 15px; /* Distância do fundo do contêiner pai */
+  right: 20px; /* Distância da direita do contêiner pai */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efeitos de transição */
+}
+
+.saiba-mais-button:hover {
+  background-color: #28a745; /* Cor ao passar o mouse */
+  transform: translateY(-2px); /* Levanta o botão um pouco */
+}
+
+.container-service-content {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: stretch;
+  padding: 50px 0;
+  flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
+  margin-top: 0rem;
+}
+
+.service-item {
+  flex: 1;
+  max-width: 320px; /* Aumenta a largura máxima das divs */
+  height: auto; /* Define a altura como automática para ajustar ao conteúdo */
+  min-height: 250px; /* Define uma altura mínima, se necessário */
+  background-color: #F0FBF4;
+  padding: 15px;
+  margin: 50px 15px; /* Mantém o alinhamento */
+  text-align: center;
+  border-radius: 50px;
+  position: relative; /* Para posicionar o botão corretamente */
+}
+
+.service-item-img .photo {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.service-item-title h1 {
+  font-size: 1.8rem;
+  margin: 10px;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+  font-style: normal;
+  color: #000;
+}
+
+.service-item-description {
+  font-family: "Barlow";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: .9rem;
+  text-align: justify;
+  padding: .5rem 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+/* Seção "Agende uma consulta" */
+.schedule-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0FBF4;
+  padding-top: 1rem; /* Ajuste o padding conforme necessário */
+  padding-bottom: 4rem; /* Ajuste o padding conforme necessário */
+  margin-top: 1rem;
+  border-radius: 8px;
+  position: relative; /* Permite que elementos filhos posicionados absolutamente se baseiem nesta div */
+  overflow: visible;
+  height: 29rem;
+}
+
+.schedule-section, .schedule-section-domicilio {
+  padding-top: 0.5rem; /* Reduz o espaçamento superior */
+  padding-bottom: 3rem; /* Reduz o espaçamento inferior */
+}
+
+.schedule-text {
+  flex: 1;
+  max-width: 35%;
+  text-align: left;
+}
+
+.schedule-text h2 {
+  font-size: 2rem;
+  font-family: "Barlow Semi Condensed";
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 10px;
+}
+
+.schedule-text p {
+  font-size: 1rem;
+  font-family: "Barlow";
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.schedule-section .button-options, .schedule-section-domicilio .button-options, .schedule-section-search .button-options {
+  background-color: #31BE52;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-align: center;
+  justify-content: center;
+  gap: 1px;
+  width: 16rem;
+  height: 3rem;
+}
+
+.schedule-image {
+  flex: 1; /* Permite que a imagem ocupe o espaço disponível */
+  max-width: 40rem; /* Defina uma largura máxima */
+  position: relative; /* Para posicionar a imagem se necessário */
+}
+
+.schedule-section .schedule-image {
+  flex: 1;
+  max-width: 40rem;
+}
+
+.schedule-image img {
+  position: absolute; /* Permite que a imagem ultrapasse os limites da div */
+  top: 50%; /* Ajuste conforme necessário para centralizar verticalmente */
+  left: 50%; /* Ajuste conforme necessário para centralizar horizontalmente */
+  width: auto; /* Deixe a largura automática */
+  height: auto; /* Deixe a altura automática */
+  max-height: 50rem; /* Defina uma altura máxima, se necessário */
+  transform: translate(-50%, -50%);
+}
+
+.schedule-section-domicilio {
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.schedule-image-domicilio img {
+  width: 30rem;
+  height: auto;
+  border-radius: 5rem;
+}
+
+.schedule-section-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0FBF4;
+  padding-top: 2rem; /* Reduzido de 17rem para 10rem */
+  padding-bottom: 2rem; /* Reduzido de 22.5rem para 15rem */
+  margin-top: 3rem;
+  height: auto; /* Ajusta a altura para ser responsiva */
+  border-radius: 8px;
+  gap: 5rem;
+}
+
+.schedule-section-search img {
+  width: 30rem;
+  height: auto;
+  border-radius: 5rem;
+}
+
+.carousel-container-depoiments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem; /* Diminui o padding superior */
+  padding-bottom: 5rem; /* Diminui o padding inferior */
+  margin-top: 6rem; /* Diminui a margem superior */
+  margin-bottom: 6rem; /* Diminui a margem inferior */
+  height: 350px; /* Altura ajustada para um tamanho mais confortável */
+  border-radius: 8px;
+  background-image: url('../../assets/img_animal/gat.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .carousel-container,
+  .clinic-description,
+  .schedule-section .schedule-image {
+      max-width: 90%; /* Reduz a largura máxima para telas menores */
+  }
+}
+
+@media (max-width: 900px) {
+  .container-images {
+      flex-direction: column; /* Coloca as imagens em coluna em telas menores */
+      align-items: center; /* Centraliza os itens */
+  }
+
+  .schedule-text,
+  .schedule-section .schedule-image,
+  .schedule-section-domicilio {
+      max-width: 100%; /* Remove a limitação de largura em telas menores */
+  }
+
+  .service-item {
+      max-width: 90%; /* Aumenta a largura máxima em telas menores */
+  }
+}
+
+@media (max-width: 600px) {
+  .clinic-description h1 {
+      font-size: 2rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .clinic-description p {
+      font-size: 1rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .service-item-title h1 {
+      font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .service-item-description {
+      font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .schedule-text h2 {
+      font-size: 2rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+
+  .schedule-text p {
+      font-size: 1rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+}
