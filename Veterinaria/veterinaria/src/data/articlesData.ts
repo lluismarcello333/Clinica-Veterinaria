@@ -153,8 +153,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/pD_64yQoXWA?si=1t8nThiEuHy3jgQF",
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      {titile: "Vacinas Essenciais: Quais são e Quando aplicar?", id: 4},
-      {titile: "A alimentação ideal para Cães e Gatos", id: 5},
+      {title: "Vacinas Essenciais: Quais são e Quando aplicar?", id: 4},
+      {title: "A alimentação ideal para Cães e Gatos", id: 5},
     ],
   },
   {
@@ -1036,8 +1036,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/M91VOqMLUUE?si=ZOoSgVrUsMDLpNrl",   
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "A Importância da Atividade Física para Pets", id: 25,
-      "Guia de Adestramento Positivo",
+      {title: "A Importância da Atividade Física para Pets", id: 25},
+      {title: "Adestramento Positivo: O que é e como fazer?", id: 30},
     ],
   },
   {
@@ -1080,8 +1080,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/RstA97jR_Hk?si=9SiYfxcQyqtPlMFV",  
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Doença Renal Crônica em Gatos", id: 7,
-      "Obesidade em Cães e Gatos: Causas e Consequências", id: 13,
+      {title: "Doença Renal Crônica em Gatos", id: 7},
+      {title: "Obesidade em Cães e Gatos: Causas e Consequências", id: 13},
     ],
   },
   {
@@ -1111,7 +1111,7 @@ const articlesData: ArticleContent[] = [
       "Reflita sobre as atividades que você faz com seu pet. Você está oferecendo estímulos suficientes?",
     images: [
       "https://aeaseguros.com.br/wp-content/uploads/2021/11/2019-11-12-quais-sao-os-beneficios-da-atividade-fisica-para-caes-1280x720-1.jpg",
-      "https://lh3.googleusercontent.com/proxy/JTxmh18uhE6fLQ91JMAXMDCgjcJXWnJa16_ql84XZWBnvSnUZ4NgS2WxmeaG_9CqDvgULKhBbEpbCGLgCRA24j4U0I_U_DK3StV5kJPqIPJPURA57HFX_Af4OcE8Z3lzPAOUfckHPOjv",
+      "https://s2-ge.glbimg.com/8OY-paun70wePqAIgvcltpiRbzs=/0x0:1254x836/600x0/smart/filters:gifv():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/B/d/BfdwefSty3Kp2O1L5aIg/cachorro-exercicio.jpg",
     ],
     caseTitles: ["Cão em Forma", "Gato Brincalhão"],
     caseDescriptions: [
@@ -1124,8 +1124,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/fJ0-v-YuxCE?si=-o36kt541Utq2s80",  
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Guia de Passeios Seguros com o Seu Pet",
-      "Obesidade em Cães e Gatos: Causas e Consequências", id: 13,
+      {title: "Guia de Passeios Seguros com o Seu Pet", id: 23},
+      {title: "Obesidade em Cães e Gatos: Causas e Consequências", id: 13},
     ],
   },
   {
@@ -1167,7 +1167,10 @@ const articlesData: ArticleContent[] = [
       "Neste vídeo, você aprenderá sobre a prevenção de doenças respiratórias em gatos.",
     videoUrl: "https://www.youtube.com/embed/SmoVQCXn2Gw?si=KkfOnIlF1pTBo6WX",   
     relatedArticlesTitle: "Artigos Relacionados",
-    relatedArticles: ["Cuidados Gerais com Gatos", "Doenças Comuns em Gatos"],
+    relatedArticles: [
+      {title: "Obesidade em Cães e Gatos: Causas e Consequências", id: 13},
+      {title: "Doença Periodontal em Cães e Gatos", id: 17},
+    ],
   },
   {
     id: 27,
@@ -1209,8 +1212,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/h8B264bLVog?si=S-BzB1HDhqkOoZBA",  
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Nutrição para Cães e Gatos",
-      "A Importância da Hidratação em Pets",
+      {title: "A Importância da Atividade Física para Pets", id: 25},
+      {title: "Adestramento Positivo: O que é e como fazer?", id: 30},
     ],
   },
   {
@@ -1252,8 +1255,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/cS5HeVCBjkk?si=krwQwD5a86cdZnMD",  
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Dicas de Enriquecimento para Pets",
-      "A Importância do Exercício para Pets",
+      {title: "A Importância da Atividade Física para Pets", id: 25},
+      {title: "Guia de Passeios Seguros com o Seu Pet", id: 23},
     ],
   },
   {
@@ -1295,8 +1298,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/rq7IAsN6hto?si=vJXKe5T61CoNZfgD",
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Cuidados com a Saúde Urinária em Cães",
-      "Sintomas Comuns em Cães"
+      {title: "O Que Fazer em Caso de Emergência?", id: 6},
+      {title: "Diabetes em Pets: Diagnóstico e Cuidados", id: 11},
     ]
 },
   {
@@ -1338,8 +1341,8 @@ const articlesData: ArticleContent[] = [
     videoUrl: "https://www.youtube.com/embed/rfvQOUV0iCs?si=h_yL0G5kbUGSC7LZ",  
     relatedArticlesTitle: "Artigos Relacionados",
     relatedArticles: [
-      "Técnicas de Adestramento para Cães",
-      "Comportamento Felino: Entendendo seu Gato",
+      {title: "A Importância da Atividade Física para Pets", id: 25},
+      {title: "Convivência entre Gatos e Cães: Dicas Importantes", id: 21}
     ],
   },
 ];

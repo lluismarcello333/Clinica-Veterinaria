@@ -28,7 +28,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
         <main className="duvida-main-container">
           <h1 className="titulo-principal">Dúvidas</h1>
           <div>
-            <a href="/castrar-gato" className="duvida-card-link">
+            <a href="/artigos/1" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>Castrar um Gato: Quando é Melhor?</h2>
                 <img src={GatoCastrado} alt="" />
@@ -38,7 +38,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
                 </span>
               </div>
             </a>
-            <a href="/fases-filhote" className="duvida-card-link">
+            <a href="/artigos/2" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>Fases do Desenvolvimento do Filhote</h2>
                 <img src={Crescimento} alt="" />
@@ -49,7 +49,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
                 </span>
               </div>
             </a>
-            <a href="/prevenir-pulgas" className="duvida-card-link">
+            <a href="/artigos/3" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>Como Prevenir Pulgas e Carrapatos?</h2>
                 <img src={Pulga} alt="" />
@@ -59,7 +59,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
                 </span>
               </div>
             </a>
-            <a href="/vacinas-essenciais" className="duvida-card-link">
+            <a href="/artigos/4" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>Vacinas Essenciais: Quais São e Quando Aplicar?</h2>
                 <img src={Vacinacao} alt="" />
@@ -69,7 +69,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
                 </span>
               </div>
             </a>
-            <a href="/alimentacao-pet" className="duvida-card-link">
+            <a href="/artigos/5" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>A Alimentação Ideal para Cães e Gatos</h2>
                 <img src={Alimentacao} alt="" />
@@ -80,7 +80,7 @@ const Duvidas: React.FC<AjudaSuporteProps> = ({ expanded, setExpanded }) => {
                 </span>
               </div>
             </a>
-            <a href="/emergencia-pet" className="duvida-card-link">
+            <a href="/artigos/6" className="duvida-card-link">
               <div className="duvida-main-container-topicos">
                 <h2>O Que Fazer em Caso de Emergência?</h2>
                 <img src={Emergencia} alt="" />
