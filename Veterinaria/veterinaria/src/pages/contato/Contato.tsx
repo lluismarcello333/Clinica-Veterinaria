@@ -1,92 +1,50 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import TextField from "@material-ui/core/TextField";
-import { Tab, Tabs, Box, Button } from "@mui/material";
-import useCustomForm from "../../hook/useForm/useCustomForm";
-import { useNavigate } from "react-router-dom";
-import CustomButton from "../../components/button/Button"; 
+import { Box } from "@mui/material";
+import WhatsAppIcon from "../../assets/whatsapp-svgrepo-com.svg";
+import Gmail from "../../assets/e-mail.png";
 import DonoPet from "../../assets/img_animal/model-contact.png";
 
 import "./Contato.css";
-import ErrorMessage from "../../hook/useForm/useCustomForm";
 
 export default function Contato() {
-  const { register, handleSubmit, errors } = useCustomForm();
-  const [value, setValue] = React.useState(0);
-  const navigate = useNavigate(); // Use useNavigate em vez de useHistory
+  const formRef = useRef<HTMLFormElement>(null); // Adiciona a referência ao formulário
 
-  const onSubmitForm = (data: any) => {
-    console.log(data);
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    // Inspect each property of the data object
-    Object.entries(data).forEach(([key, value]) => {
-      console.log(`${key}:`, value);
-    });
+    emailjs
+      .sendForm(
+        "service_px5yag2", // ID do serviço de email
+        "template_uuquj9e", // ID do template
+        e.target as HTMLFormElement,
+        "eEU9e5NvGB1WAKPva" // User ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Mensagem enviada com sucesso!");
+          formRef.current?.reset(); 
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Ocorreu um erro ao enviar a mensagem.");
+        }
+      );
+  };
 
-    // Redireciona para a página principal
-    navigate("/"); // Use navigate para redirecionar para a página desejada
+  const handleSendWhatsAppMessage = () => {
+    let message = `Olá, gostaria de agendar uma consulta para meu pet. 🐾 \n\nPor favor, entre em contato para verificar a disponibilidade.`;
+    window.open(
+      `https://wa.me/5521965502519?text=${encodeURIComponent(message)}`
+    );
   };
 
   return (
     <div className="container-form">
       <h1>Contato</h1>
       <div className="container-main-form">
-      <div className="title-subtitle">
-          <h1>Envie-nos uma mensagem</h1>
-          <p className="subtitle">Se precisar de alguma ajuda, estamos à sua disposição.</p>
-
-          <form onSubmit={handleSubmit(onSubmitForm)}>
-            <Box className="container-box-primary">
-              {value === 0 && (
-                <Box p={3} className="container-dados">
-                  <div className="text">
-                    <TextField
-                      fullWidth
-                      label="Nome"
-                      {...register("name", { required: "Campo obrigatório" })}
-                    />
-                    {errors.name && <p>{errors.name.message}</p>}
-
-                    <TextField
-                      fullWidth
-                      label="Email"
-                      {...register("email", { required: "Campo obrigatório" })}
-                    />
-                    {errors.email && <p>{errors.email.message}</p>}
-
-                    <TextField
-                      fullWidth
-                      label="DDD + Telefone ou Celular"
-                      {...register("phone", { required: "Campo obrigatório" })}
-                    />
-                    {errors.phone && <p>{errors.phone.message}</p>}
-
-                    <TextField
-                      fullWidth
-                      label="Mensagem"
-                      multiline
-                      rows={4}
-                      {...register("message", {
-                        required: "Campo obrigatório para a mensagem",
-                      })}
-                    />
-                    {errors.phone && <p>{errors.phone.message}</p>}
-                  </div>
-                </Box>
-              )}
-            </Box>
-
-            <div className="button">
-              <Button
-                className="button-form-dados"
-                type="submit"
-                variant="contained"
-                color="primary"
-              >
-                Enviar Mensagem
-              </Button>
-            </div>
-          </form>
-        </div>
         <div className="infos-left">
           <h3>Endereço</h3>
           <p>
@@ -97,10 +55,50 @@ export default function Contato() {
           <h3>Email</h3>
           <p>clinica@gmail.com</p>
         </div>
-        
+        <div className="title-subtitle">
+          <h1>Envie-nos uma mensagem</h1>
+          <p className="subtitle">
+            Se precisar de alguma ajuda, estamos à sua disposição.
+          </p>
+
+          <form ref={formRef} onSubmit={sendEmail}>
+            {" "}
+            {/* Adiciona a referência ao formulário */}
+            <Box className="container-box-primary">
+              <Box p={3} className="container-dados">
+                <div className="text">
+                  <TextField fullWidth label="Nome" name="name" required />
+                  <TextField fullWidth label="Email" name="email" required />
+                  <TextField
+                    fullWidth
+                    label="DDD + Telefone ou Celular"
+                    name="phone"
+                    required
+                  />
+                  <TextField
+                    fullWidth
+                    label="Mensagem"
+                    name="message"
+                    multiline
+                    rows={4}
+                    required
+                  />
+                </div>
+              </Box>
+            </Box>
+            <button className="button-form-dados" type="submit">
+              <img
+                src={Gmail}
+                alt="Enviar mensagem"
+                style={{ marginRight: "8px", width: "20px", height: "20px" }}
+              />
+              Enviar Mensagem
+            </button>
+          </form>
+        </div>
       </div>
       {/* Agende sua visita */}
-      <div className="schedule-section-sobre">
+      <div className="schedule-section-contato">
         <div className="schedule-text">
           <h2>Agende sua visita</h2>
           <p>
@@ -111,12 +109,17 @@ export default function Contato() {
             mais específicos, estamos à disposição para cuidar da saúde e
             bem-estar do seu animal. Entre em contato agora e marque um horário!
           </p>
-          <a href="https://wa.me/5521965502519">
-            <CustomButton
-              buttonName="Agende pelo WhatsApp"
-              className="button-options"
+          <button
+            className="button-home-section"
+            onClick={handleSendWhatsAppMessage}
+          >
+            <img
+              src={WhatsAppIcon}
+              alt="WhatsApp"
+              style={{ marginRight: "8px", width: "20px", height: "20px" }}
             />
-          </a>
+            Entre em contato
+          </button>
         </div>
         <div className="schedule-image">
           <img src={DonoPet} alt="Dono com seu pet" />

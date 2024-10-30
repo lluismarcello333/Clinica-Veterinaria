@@ -34,7 +34,7 @@ export function DetailsFooter() {
               <RouterLink to="/artigos">Artigos</RouterLink>
             </li>
             <li>
-              <RouterLink to="/">Política de Privacidade</RouterLink>
+              <RouterLink to="/politica-privacidade">Política de Privacidade</RouterLink>
             </li>
           </ul>
         </div>

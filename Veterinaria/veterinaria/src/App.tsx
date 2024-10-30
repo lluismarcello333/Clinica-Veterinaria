@@ -14,6 +14,7 @@ import Article from "./components/article/Article";
 import ArticleDetails from "./components/articleDetails/ArticleDetails";
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import PoliticaPrivacidade from './pages/politica-privacidade/PoliticaPrivacidade';
 
 // Componente Wrapper para ServiceDetails
 const ServiceDetailsWrapper = () => {
@@ -80,6 +81,7 @@ function App() {
             />
             <Route path="/artigos" element={<Article />} />
             <Route path="/artigos/:id" element={<ArticleDetails />} />
+            <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
           </Routes>
         </main>
 

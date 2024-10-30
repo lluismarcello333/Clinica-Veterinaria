@@ -1,6 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 //import { lime, purple } from '@mui/material/colors';
-import { PaletteOptions } from '@mui/material/styles/createPalette';
 import { ThemeOptions } from '@mui/material/styles/createTheme';
 
 interface CustomPaletteOptions extends ThemeOptions  {

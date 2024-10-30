@@ -3,10 +3,9 @@
 .container-form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -91,27 +90,86 @@ form {
     margin-bottom: 20px;
 }
 
-.text p {
-    font-size: 0.9rem;
-    color: red;
-    margin-top: 5px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .button-form-dados {
-    background-color: #2F4F4F;
-    color: #FFF;
-    padding: 10px 20px;
-    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px 20px; 
+    margin-left: 1.4rem;
+    background-color: #2F4F4F; 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte */
+  }
+  
+.button-form-dados img {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
 }
 
 .button-form-dados:hover {
     background-color: #555;
+}
+
+.schedule-section-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0FBF4;
+    max-width: 100%;
+    padding-top: 1rem; /* Ajuste o padding conforme necessário */
+    padding-bottom: 4rem; /* Ajuste o padding conforme necessário */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 8px;
+    position: relative; /* Permite que elementos filhos posicionados absolutamente se baseiem nesta div */
+    overflow: visible;
+    height: 28.4rem;
+}
+
+.schedule-section-contato .schedule-text {
+    flex: 1;
+    max-width: 35%;
+    text-align: left;
+}
+  
+.schedule-section-contato .schedule-text h2 {
+    font-size: 2rem;
+    font-family: "Barlow Semi Condensed";
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.schedule-section-contato .schedule-text p {
+    font-size: 1.1rem;
+    font-family: "Barlow";
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.schedule-section-contato .button-options {
+    background-color: #31BE52;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    justify-content: center;
+    gap: 1px;
+    width: 20rem;
+    height: 3rem;
+}
+
+.schedule-section-contato .button-options:hover {
+    background-color: #28A745;
+}
+
+.schedule-section-contato .schedule-image {
+    flex: 1;
+    max-width: 40rem;
 }
 
 /* Responsividade para telas muito grandes (acima de 1600px) */
@@ -119,7 +177,7 @@ form {
     .container-main-form {
         max-width: 1400px;
     }
-    
+
     .title-subtitle h1 {
         font-size: 2.8rem;
     }
@@ -134,7 +192,7 @@ form {
     .container-main-form {
         max-width: 1200px;
     }
-    
+
     .title-subtitle h1 {
         font-size: 2.4rem;
     }
@@ -170,13 +228,17 @@ form {
         margin-right: 0;
         margin-bottom: 30px;
     }
-    
+  
     .title-subtitle h1 {
         font-size: 1.8rem;
     }
 
     .title-subtitle .subtitle {
         font-size: 1.2rem;
+    }
+
+    .button-form-dados {
+        width: 100%;
     }
 }
 
@@ -185,16 +247,40 @@ form {
     .title-subtitle h1 {
         font-size: 1.6rem;
     }
-  
+
     .infos-left h3, .infos-left p {
         font-size: 1.2rem;
     }
-  
+
     .title-subtitle p {
         font-size: 1rem;
     }
 
     .button-form-dados {
         width: 100%;
+        justify-content: center;
+    }
+
+    .container-box-primary {
+        padding: 0;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    .schedule-section-contato {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .schedule-section-contato .schedule-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .schedule-section-contato .schedule-image {
+        max-width: 100%;
+        height: auto;
     }
 }
