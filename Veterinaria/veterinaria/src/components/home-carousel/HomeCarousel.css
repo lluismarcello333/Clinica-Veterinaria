@@ -1,6 +1,0 @@
-.carousel-image{
-    width: 100rem;
-    height: 150rem;
-    object-fit: cover; /* Corta o excesso e ajusta a imagem ao tamanho do container */
-    overflow: hidden;
-}
